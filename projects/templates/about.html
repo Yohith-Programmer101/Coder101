@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {% load static %}
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Author</title>
+        <link rel="shortcut icon" href="{% static 'coder.png' %}" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <meta name="description" content="About the website coder101 website.">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+        <style id="import"></style>
+    </head>
+
+    <body>
+        <div class="scrollmenu">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'about' %}" class="active">About</a>
+            <a href="{% url 'author' %}">Author</a>
+        </div>
+        <br>
+        <p style="font-size: 40px;">About</p>
+        <hr style="height: 2px; background-color: black;">
+        <img src="{% static 'coder.png' %}" alt="coder.jpg" style="border-radius: 50%;">
+        <p style="font-size: 35px;"><u>CODER 101</u></p>
+        <p>This website is a collection of varies types of single page web projects with HTML, CSS and JavaScript. All
+            these single page web pages were made by Me(author) and my friends and some of them form online. If you want
+            your single page web projects to be in the website you can contact me to add it. While contacting me send me
+            a
+            message with the file to add it. If you are wishing to give you single page web file join this whatsapp
+            group <a href="https://chat.whatsapp.com/HX6JQrnexB022LhZkqErf0"
+                target="_blank">https://chat.whatsapp.com/HX6JQrnexB022LhZkqErf0</a> or this discord server <a
+                href="https://discord.gg/HNvXnPkUSP" target="_blank">https://discord.gg/HNvXnPkUSP</a></p>
+        <script>
+            $("#import").load("https://raw.githubusercontent.com/Yohith-Programmer101/Web-Projects/main/Projects/navstyle.css")
+        </script>
+    </body>
+
+</html>

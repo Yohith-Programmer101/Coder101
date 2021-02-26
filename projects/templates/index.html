@@ -7,24 +7,155 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Coder101</title>
-        <link rel="shortcut icon" href="{% static 'coder.jpg' %}" type="image/x-icon">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"
-            integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"
-            integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG"
-            crossorigin="anonymous"></script>
+        <title>Projects</title>
+        <link rel="shortcut icon" href="{% static 'coder.png' %}" type="image/x-icon">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <meta name="description" content="This is a website of collection of HTML, CSS and JavaScript projects.">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .color-box {
+                border-radius: 5px;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .color-box:hover {
+                box-shadow:
+                    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+                    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+                    0 12.5px 10px rgba(0, 0, 0, 0.06),
+                    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+                    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+                    0 100px 80px rgba(0, 0, 0, 0.12);
+            }
+
+            .box {
+                border-radius: 5px;
+                padding: 2px;
+                color: black;
+                background: lightgrey;
+                margin: 5px;
+            }
+
+            .scroll-y {
+                overflow-y: scroll;
+            }
+
+            .scroll-x {
+                overflow-x: scroll;
+            }
+
+            #count {
+                margin: 5px;
+                padding: 5px;
+                color: black;
+            }
+
+            #searchbar {
+                border: none;
+                width: 300px;
+                height: 30px;
+                font-size: 20px;
+            }
+
+            #searchbar:focus {
+                border: 3px solid black;
+                border-radius: 5px;
+            }
+
+            #container {
+                display: flex;
+                padding: 10px;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            .card-image>img {
+                width: 300px;
+                height: 150px;
+            }
+        </style>
+        <style id="import"></style>
     </head>
 
-    <body>
-        <h1>Coder101 App</h1>
+    <body id="body">
+        <div class="scrollmenu">
+            <a href="{% url 'index' %}" class="active">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'author' %}">Author</a>
+        </div>
+        <br>
+        <p style="font-size: 40px;"><span id="process">Projects: </span><span id="count"></span></p>
+        <input type="text" id="searchbar" name="searchbar" placeholder="Search..">
+        <hr style="height: 2px; background-color: black;">
+
+        <div id="container">
+        </div>
+
+        <script>
+            loadProjects();
+            function loadProjects() {
+                $.getJSON("{% static 'projects.json' %}", function (data) {
+                    $("#count").html(data.length);
+                    for (let i = 0; i < 8; i++) {
+                        loadLoop(data, i);
+                    }
+                    window.onscroll = function (ev) {
+                        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                            loadContent(data)
+                        }
+                    };
+                })
+            }
+
+            function loadContent(data) {
+                var max = data.length;
+                for (let i = 8; i <= max; i++) {
+                    if ($(".color-box:visible").length == max) {
+                        break;
+                    }
+                    else {
+                        loadLoop(data, i);
+                    }
+                }
+            }
+
+            function loadLoop(data, i) {
+                var link = document.createElement("a");
+                link.setAttribute("href", data[i]["url"]);
+                link.setAttribute("target", "_blank");
+                link.setAttribute("style", "color: black;");
+                link.innerHTML = `<div class="card color-box" style="width: 300px; height: 300px;">
+                                  <div class="card-image" style="margin: 0%;">
+                                    <img src="` + data[i]["image"] + `" style="` + data[i]["style"] + `">
+                                  </div>
+                                  <div class="card-content">
+                                    <h4 style="margin: 0px; margin-bottom: 10px;">` + data[i]["title"] + `</h4>
+                                    <h6>` + data[i]["desc"] + `</h6>
+                                  </div>
+                                </div>`
+                document.getElementById("container").appendChild(link);
+            }
+
+            function changeNoOfItems() {
+                $("#count").html($(".color-box:visible").length);
+            }
+
+            $("#searchbar").on("input", function () {
+                var value = $(this).val().toLowerCase();
+                $("#container .color-box").filter(function () {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+                changeNoOfItems();
+            });
+            $("#import").load("https://raw.githubusercontent.com/Yohith-Programmer101/Web-Projects/main/Projects/navstyle.css")
+        </script>
     </body>
 
 </html>

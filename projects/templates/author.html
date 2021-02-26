@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {% load static %}
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About</title>
+        <link rel="shortcut icon" href="{% static 'coder.png' %}" type="image/x-icon">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <meta name="description" content="This is a website of collection of HTML, CSS and JavaScript projects.">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <meta name="description" content="About the author of the coder101 website.">
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+        <style id="import"></style>
+    </head>
+
+    <body>
+        <div class="scrollmenu">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'author' %}" class="active">Author</a>
+        </div>
+        <br>
+        <p style="font-size: 40px;">Author</p>
+        <hr style="height: 2px; background-color: black;">
+        <img src="{% static 'coder.png' %}" alt="coder.jpg" style="border-radius: 50%;">
+        <p style="font-size: 35px;"><u>CODER 101</u></p>
+        <p>I am Yohith, the author of this website, i am a web developer, app developer and an automater with python 3.
+            I
+            have developed 3 websites and an android, windows, mac and linux app till now. You can contact me from
+            discord
+            or send an email, my user name in discord is Yohith#7201 and my email id is yohithprogrammer101@gmail.com.
+            The
+            websites that i have developed till now are <a href="http://communication-bot.rf.gd" ,
+                target="_blank">http://communication-bot.rf.gd</a>, <a href="http://communication-bot.epizy.com"
+                target="_blank">http://communication-bot.epizy.com</a> and <a href="http://primezone.epizy.com"
+                target="_blank">http://primezone.epizy.com</a></p>
+    </body>
+
+</html>
+
+<script>
+    $("#import").load("https://raw.githubusercontent.com/Yohith-Programmer101/Web-Projects/main/Projects/navstyle.css")
+</script>
