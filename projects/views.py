@@ -2,6 +2,7 @@ from django.shortcuts import render, HttpResponse, get_object_or_404, HttpRespon
 from .models import *
 import requests
 import bs4
+from .forms import *
 
 
 def home(request):
@@ -28,3 +29,23 @@ def projects(request, id):
     else:
         site = requests.get(obj.blob)
         return HttpResponse(site)
+
+
+def login(request):
+    context = {}
+    context["form"] = Login()
+    return render(request, "Login/login.html", context)
+
+
+def loggedin(request):
+    context = {}
+    user_name = request.POST["user_name"]
+    password = request.POST["password"]
+    if (user_name == "coder101") and (password == "coder101password"):
+        context["title"] = "Welcome !"
+        context["body"] = "You have logged in successfully !"
+        return render(request, "Login/logged_in.html", context)
+    else:
+        context["form"] = Login()
+        context["message"] = "Wrong Password Or User Name"
+        return render(request, "Login/login.html", context)
