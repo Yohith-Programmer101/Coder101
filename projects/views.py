@@ -18,8 +18,9 @@ def author(request):
 
 def projects(request, id):
     model = Projects
+    print(id)
     try:
-        obj = Projects.objects.all(pk=id)
+        obj = Projects.objects.get(pk=id)
     except:
         return render(request, "project_not_found.html")
     if obj.is_site == True:
