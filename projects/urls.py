@@ -7,5 +7,6 @@ urlpatterns = [
     path('about', about, name='about'),
     path('author', author, name='author'),
     path('d1', login, name='login'),
-    path('d1l', loggedin, name='loggedin')
+    path('d1l', loggedin, name='loggedin'),
+    path('favicon.ico', favicon, name='favicon.ico'),
 ]

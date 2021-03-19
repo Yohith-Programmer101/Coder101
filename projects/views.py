@@ -1,9 +1,11 @@
 from django.shortcuts import render, HttpResponse, get_object_or_404, HttpResponseRedirect
+from django.views.generic.base import RedirectView
 from .models import *
 import requests
 import bs4
 from .forms import *
 
+favicon = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
 
 def home(request):
     return render(request, "index.html")
