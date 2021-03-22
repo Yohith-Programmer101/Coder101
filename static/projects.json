@@ -95,5 +95,24 @@
         "title": "Avax Bot",
         "desc": "A website made by me for a discord bot.",
         "style": "width: 150px; margin: auto;"
+    },
+    {
+        "url": "9",
+        "image": "https://www.kapwing.com/resources/content/images/2019/07/final_5d1a76214bc82f00133c2e6a_500831.jpg",
+        "title": "Youtube Downloader",
+        "desc": "Here you can download youtube videos for free."
+    },
+    {
+        "url": "16",
+        "image": "https://cdn3.iconfinder.com/data/icons/brands-applications/512/File-512.png",
+        "title": "Files Downloader",
+        "desc": "Here you can download files form a url given.",
+        "style": "width: 150px; margin: auto;"
+    },
+    {
+        "url": "17",
+        "image": "https://lh3.googleusercontent.com/proxy/uSXMz9PapjrL6TrEbOEiBJRs0qeADDFuYKxg_HmuyJXyN58TD5pAeHh4DHBnrLmt8kVuO-_kiX08l0JKH0DQ-1PF2lpmID2Eu7PrW87Vm5cio-Z7J-hBvA",
+        "title": "Downloader101",
+        "desc": "This is an app where you can download files and youtube videos for free."
     }
 ]
