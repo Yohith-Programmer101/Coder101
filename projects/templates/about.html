@@ -21,6 +21,36 @@
         <meta name="og:image:height" content="100">
         <meta name="og:image:width" content="100">
         <meta name="og:description" content="About the website coder101 website.">
+    </head>
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <body>
+        <div id="body" style="display: none;">
+            <div class="scrollmenu">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'about' %}" class="active">About</a>
+                <a href="{% url 'author' %}">Author</a>
+            </div>
+            <br>
+            <p style="font-size: 40px;">About</p>
+            <hr style="height: 2px; background-color: black;">
+            <img src="https://us.123rf.com/450wm/sommersby/sommersby1908/sommersby190800026/129073448-thin-line-hacker-or-coder-icon-on-a-grey-background.jpg?ver=6"
+                alt="coder.jpg" style="border-radius: 50%;">
+            <p style="font-size: 35px;"><u>CODER 101</u></p>
+            <p>This website is a collection of varies types of web projects with HTML, CSS and JavaScript. All
+                these web pages were made by Me(author) and my friends and some of them from online. If you want
+                your projects to be in the website you can contact me to add it. While contacting me send me
+                a
+                message with the file to add it or if you already have a domain name send the domain name. If you are
+                wishing to give your web project files join this whatsapp
+                group <a href="https://chat.whatsapp.com/HX6JQrnexB022LhZkqErf0"
+                    target="_blank">https://chat.whatsapp.com/HX6JQrnexB022LhZkqErf0</a> or this discord server <a
+                    href="https://discord.gg/HNvXnPkUSP" target="_blank">https://discord.gg/HNvXnPkUSP</a></p>
+        </div>
+
         <style>
             body {
                 font-family: Arial, Helvetica, sans-serif;
@@ -111,42 +141,13 @@
             }
         </style>
         <style id="import"></style>
-    </head>
-
-    <div id="preloader">
-        <div id="loader"></div>
-    </div>
-
-    <body id="body">
-        <div class="scrollmenu">
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'about' %}" class="active">About</a>
-            <a href="{% url 'author' %}">Author</a>
-        </div>
-        <br>
-        <p style="font-size: 40px;">About</p>
-        <hr style="height: 2px; background-color: black;">
-        <img src="https://us.123rf.com/450wm/sommersby/sommersby1908/sommersby190800026/129073448-thin-line-hacker-or-coder-icon-on-a-grey-background.jpg?ver=6"
-            alt="coder.jpg" style="border-radius: 50%;">
-        <p style="font-size: 35px;"><u>CODER 101</u></p>
-        <p>This website is a collection of varies types of web projects with HTML, CSS and JavaScript. All
-            these web pages were made by Me(author) and my friends and some of them from online. If you want
-            your projects to be in the website you can contact me to add it. While contacting me send me
-            a
-            message with the file to add it or if you already have a domain name send the domain name. If you are
-            wishing to give your web project files join this whatsapp
-            group <a href="https://chat.whatsapp.com/HX6JQrnexB022LhZkqErf0"
-                target="_blank">https://chat.whatsapp.com/HX6JQrnexB022LhZkqErf0</a> or this discord server <a
-                href="https://discord.gg/HNvXnPkUSP" target="_blank">https://discord.gg/HNvXnPkUSP</a></p>
 
         <script>
-            document.getElementById("body").style.display = "none";
-
             $("#import").load("https://raw.githubusercontent.com/Yohith-Programmer101/Web-Projects/main/Projects/navstyle.css")
 
             $("document").ready(function () {
                 $("#preloader").hide();
-                $("body").show();
+                $("#body").show();
             })
         </script>
 

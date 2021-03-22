@@ -22,6 +22,47 @@
         <meta name="og:image:height" content="100">
         <meta name="og:image:width" content="100">
         <meta name="og:description" content="About the author of the coder101 website.">
+    </head>
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
+
+    <body>
+        <div id="body" style="display: none;">
+            <div class="scrollmenu">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'author' %}" class="active">Author</a>
+            </div>
+            <br>
+            <p style="font-size: 40px;">Author</p>
+            <hr style="height: 2px; background-color: black;">
+            <img src="https://us.123rf.com/450wm/sommersby/sommersby1908/sommersby190800026/129073448-thin-line-hacker-or-coder-icon-on-a-grey-background.jpg?ver=6"
+                alt="coder.jpg" style="border-radius: 50%;">
+            <p style="font-size: 35px;"><u>CODER 101</u></p>
+            <p>I am Yohith, the author of this website, i am a web developer, app developer and an automater with python
+                3.
+                I
+                have developed 5 websites and an android, windows, mac and linux app till now. You can contact me from
+                discord
+                or send an email, my user name in discord is Yohith#7201 and my email id is
+                yohithprogrammer101@gmail.com.
+            </p><br>
+            <p style="font-size: 35px;"><u>Made By Me : </u></p>
+
+            <ol>
+                <li>Communication Bot - <a
+                        href="http://communication-bot.epizy.com">http://communication-bot.epizy.com</a>
+                </li>
+                <li>Avax Bot - <a href="http://avax-bot.rf.gd">http://avax-bot.rf.gd</a></li>
+                <li>Prime Zone - <a href="http://primezone.epizy.com">http://primezone.epizy.com</a></li>
+                <li>Coder 101 - <a href="https://coder101.herokuapp.com">https://coder101.herokuapp.com</a> | <a
+                        href="http://coder101.epizy.com">http://coder101.epizy.com</a></li>
+                <li>Yohith-Programmer101 - <a href="https://yohith.herokuapp.com">https://yohith.herokuapp.com</a></li>
+            </ol>
+        </div>
+
         <style>
             body {
                 font-family: Arial, Helvetica, sans-serif;
@@ -112,50 +153,13 @@
             }
         </style>
         <style id="import"></style>
-    </head>
-
-    <div id="preloader">
-        <div id="loader"></div>
-    </div>
-
-    <body id="body">
-        <div class="scrollmenu">
-            <a href="{% url 'index' %}">Home</a>
-            <a href="{% url 'about' %}">About</a>
-            <a href="{% url 'author' %}" class="active">Author</a>
-        </div>
-        <br>
-        <p style="font-size: 40px;">Author</p>
-        <hr style="height: 2px; background-color: black;">
-        <img src="https://us.123rf.com/450wm/sommersby/sommersby1908/sommersby190800026/129073448-thin-line-hacker-or-coder-icon-on-a-grey-background.jpg?ver=6"
-            alt="coder.jpg" style="border-radius: 50%;">
-        <p style="font-size: 35px;"><u>CODER 101</u></p>
-        <p>I am Yohith, the author of this website, i am a web developer, app developer and an automater with python 3.
-            I
-            have developed 5 websites and an android, windows, mac and linux app till now. You can contact me from
-            discord
-            or send an email, my user name in discord is Yohith#7201 and my email id is yohithprogrammer101@gmail.com.
-        </p><br>
-        <p style="font-size: 35px;"><u>Made By Me : </u></p>
-
-        <ol>
-            <li>Communication Bot - <a href="http://communication-bot.epizy.com">http://communication-bot.epizy.com</a>
-            </li>
-            <li>Avax Bot - <a href="http://avax-bot.rf.gd">http://avax-bot.rf.gd</a></li>
-            <li>Prime Zone - <a href="http://primezone.epizy.com">http://primezone.epizy.com</a></li>
-            <li>Coder 101 - <a href="https://coder101.herokuapp.com">https://coder101.herokuapp.com</a> | <a
-                    href="http://coder101.epizy.com">http://coder101.epizy.com</a></li>
-            <li>Yohith-Programmer101 - <a href="https://yohith.herokuapp.com">https://yohith.herokuapp.com</a></li>
-        </ol>
 
         <script>
-            document.getElementById("body").style.display = "none";
-
             $("#import").load("https://raw.githubusercontent.com/Yohith-Programmer101/Web-Projects/main/Projects/navstyle.css")
 
             $("document").ready(function () {
                 $("#preloader").hide();
-                $("body").show();
+                $("#body").show();
             })
         </script>
 
