@@ -253,9 +253,11 @@
             $("#import").load("https://raw.githubusercontent.com/Yohith-Programmer101/Web-Projects/main/Projects/navstyle.css")
 
             $("document").ready(function () {
-                $("#preloader").hide();
-                $("#body").show();
-                loadContent(datas)
+                setTimeout(function () {
+                    $("#preloader").hide();
+                    $("#body").show();
+                    loadContent(datas);
+                }, 500)
             })
         </script>
     </body>
