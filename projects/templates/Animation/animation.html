@@ -1,0 +1,56 @@
+<html lang="en">
+
+  {% load static %}
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Baloo 2' rel='stylesheet'>
+    <meta name="keywords"
+      content="coder101, coderone, hacker101, hackerone, example, html, css, javascript , animation, transmition, background, styling , style , script">
+    <meta name="author" content="Yohith">
+    <meta name="owner" content="Yohith">
+    <link rel='shortcut icon' type='image/ico'
+      href='data:image/png;base64,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'>
+    <meta name="description"
+      content="This page is a part of coder101 website, an example to show animation with raw CSS">
+    <link rel="stylesheet" href="{% static 'navstyle.css' %}">
+    <link rel="stylesheet" href="{% static 'Animation/animation.css' %}">
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+    <style id="import"></style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="animate1 box">
+        <p class="content">CSS</p>
+      </div>
+      <div class="animate2 box">
+        <p class="content">CSS</p>
+      </div>
+      <div class="animate3 box">
+        <p class="content">CSS</p>
+      </div>
+      <div class="animate4 box">
+        <p class="content">CSS</p>
+      </div>
+      <div class="animate5 box">
+        <p class="content">CSS</p>
+      </div>
+      <div class="animate6 box">
+        <p class="content">CSS</p>
+      </div>
+      <div class="animate7 box">
+        <p class="content">CSS</p>
+      </div>
+    </div>
+
+  </body>
+
+</html>

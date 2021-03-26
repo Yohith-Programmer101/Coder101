@@ -7,6 +7,7 @@ from .forms import *
 
 favicon = RedirectView.as_view(url='/static/favicon.ico', permanent=True)
 
+
 def home(request):
     return render(request, "index.html")
 
@@ -29,8 +30,8 @@ def projects(request, id):
     if obj.is_site == True:
         return HttpResponseRedirect(obj.blob)
     else:
-        site = requests.get(obj.blob)
-        return HttpResponse(site)
+        print(obj.blob)
+        return render(request, obj.blob)
 
 
 def login(request):

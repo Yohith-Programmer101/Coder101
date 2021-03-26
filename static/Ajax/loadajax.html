@@ -1,0 +1,58 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajax</title>
+        <meta name="keywords"
+            content="coder101, coderone, hacker101, hackerone, example, html, css, javascript , animation, transmition, background, styling , style , script">
+        <meta name="author" content="Yohith">
+        <meta name="owner" content="Yohith">
+        <link rel="short icon"
+            href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKSLiOaHtoqS4C-mex497DrI-RTo9ubOiZoQ&usqp=CAU">
+        <meta name="description" content="This page is a part of coder 101 website, an example for working of AJAX">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+            integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+            integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'navstyle.css' %}">
+    </head>
+
+    <body>
+        <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=small-all" alt="">
+        <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=xx-large-to" alt="">
+        <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=large-done" alt="">
+        <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=medium-all" alt="">
+        <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=small-medium-all" alt="">
+        <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=small-large-all" alt="">
+        <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=big-all" alt="">
+        <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=small-big-all" alt="">
+        <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=big-large-all" alt="">
+
+        <script>
+            function createRandomWord(length) {
+                var consonants = 'bcdfghjlmnpqrstv',
+                    vowels = 'aeiou',
+                    rand = function (limit) {
+                        return Math.floor(Math.random() * limit);
+                    },
+                    i, word = '', length = parseInt(length, 10),
+                    consonants = consonants.split(''),
+                    vowels = vowels.split('');
+                for (i = 0; i < length / 2; i++) {
+                    var randConsonant = consonants[rand(consonants.length)],
+                        randVowel = vowels[rand(vowels.length)];
+                    word += (i === 0) ? randConsonant.toUpperCase() : randConsonant;
+                    word += i * 2 < length - 1 ? randVowel : '';
+                }
+                return word;
+            }
+        </script>
+    </body>
+
+</html>

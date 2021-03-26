@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {% load static %}
+
+    <head>
+        <title>Cursor</title>
+        <meta charset="utf-8">
+        <meta name="desctiption" content="enter your bio-data and submit">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keyword" content="bio-data, forms, bio-data-forms">
+        <meta name="author" content="yohith">
+        <meta name="keywords"
+            content="coder101, coderone, hacker101, hackerone, example, html, css, javascript , animation, transmition, background, styling , style , script">
+        <meta name="author" content="Yohith">
+        <meta name="owner" content="Yohith">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel='shortcut icon' type='image/ico'
+            href='data:image/png;base64,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'>
+        <meta name="description" content="This page is a part of coder101 website, a project which can change cursors.">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'navstyle.css' %}">
+        <style>
+            body {
+                cursor: url("{% static 'Cursor/htmlcursor.png' %}"),
+                auto;
+            }
+
+            button {
+                margin: 10px;
+                padding: 5px;
+                width: 200px;
+                text-align: center;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Cursor Changer:</h1>
+        <button class="btn btn-basic" style="background-color: lightgrey;"
+            onclick="document.getElementsByTagName('BODY')[0].style.cursor='default'">Default</button> <br>
+        <button class="btn btn-warning" onclick="changeCursor('htmlcursor.png')">HTML Sheild</button> <br>
+        <button class="btn btn-primary" onclick="changeCursor('csscursor.png')">CSS Shield</button> <br>
+        <button class="btn btn-warning" onclick="changeCursor('jscursor.png')">JS Shield</button> <br>
+        <button class="btn btn-warning" onclick="changeCursor('lioncursor.png')">Lion</button> <br>
+        <button class="btn btn-danger" onclick="changeCursor('tigercursor.png')">Tiger</button> <br>
+        <button class="btn btn-success" onclick="changeCursor('pythoncursor.png')">Python</button>
+
+        <script>
+            var url = "{% static 'Cursor/' %}"
+            alert("This page will only work in laptops or desktops or any other device which has a cursor and a mouse");
+
+            function changeCursor(curso) {
+                document.getElementsByTagName("BODY")[0].style.cursor = "url('" + url + curso + "'), auto"
+            }
+        </script>
+    </body>
+
+</html>

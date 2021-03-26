@@ -1,0 +1,115 @@
+.container{
+    font-family: "Baloo 2";
+}
+.content{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.box{
+    height:50px;
+    width: 50px;
+    text-align: center;
+    color: white;
+    background-color: #66ff33;
+    border-radius: 5px;
+}
+
+.animate1{
+    animation-name: animate1;
+    animation-duration: 4s;
+}
+
+@keyframes animate1 {
+    from {background-color: red;}
+    to {background-color: yellow;}
+}
+
+.animate2{
+    animation-name: animate2;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate2 {
+    from {background-color: red;}
+    to {background-color: blue;}
+}
+
+.animate3{
+    animation-name: animate3;
+    animation-duration: 4s;
+    position: relative;
+    animation-delay: 2s;
+}
+
+@keyframes animate3{
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;} 
+}
+
+.animate4{
+    animation-name: animate4;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes animate4{
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;} 
+}
+
+.animate5{
+    animation-name: animate5;
+    animation-iteration-count: 4;
+    position: relative;
+    animation-duration: 4s;
+    animation-direction: reverse;
+}
+
+@keyframes animate5{
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+.animate6{
+    animation-name: animate6;
+    animation-duration: 4s;
+    animation-iteration-count: 8;
+    position: relative;
+    animation-direction: alternate;
+}
+
+@keyframes animate6{
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;} 
+}
+
+.animate7{
+    animation-name: animate7;
+    animation-duration: 4s;
+    position: relative;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animate7{
+    0% {transform: rotate(0deg);left:0px;}
+    25% {transform: rotate(20deg);left:0px;}
+    50% {transform: rotate(0deg);left:500px;}
+    55% {transform: rotate(0deg);left:500px;}
+    70% {transform: rotate(0deg);left:500px;background:#1ec7e6;}
+    100% {transform: rotate(-360deg);left:0px;}
+}

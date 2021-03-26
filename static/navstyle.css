@@ -1,0 +1,60 @@
+::-webkit-scrollbar, ::-webkit-scrollbar:hover {
+    background-color: #e6e6e6;
+}
+::-webkit-scrollbar {
+    width: 12px;
+    height: 8px;
+    border-radius: 100px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 100px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+::-webkit-scrollbar-track {
+    border: 3px solid transparent;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.active{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: #e6e6e6;
+}
+.scrollmenu {
+    margin: 0px;
+    font-size: 20px;
+    top: 0;
+    background-color: white;
+    overflow-x: scroll;
+    white-space: nowrap;
+}
+.scrollmenu a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+.scrollmenu a:hover{
+    color: black;
+    border-bottom: black solid 2px;
+    transition-duration: 0.1s;
+}

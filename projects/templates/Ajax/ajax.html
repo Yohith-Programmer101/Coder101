@@ -1,0 +1,73 @@
+<html lang="en">
+
+    {% load static %}
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ajax</title>
+        <meta name="keywords"
+            content="coder101, coderone, hacker101, hackerone, example, html, css, javascript , animation, transmition, background, styling , style , script">
+        <meta name="author" content="Yohith">
+        <meta name="owner" content="Yohith">
+        <link rel="short icon"
+            href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKSLiOaHtoqS4C-mex497DrI-RTo9ubOiZoQ&usqp=CAU">
+        <meta name="description" content="This page is a part of coder 101 website, an example for working of AJAX">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+            integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+            integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'navstyle.css' %}">
+        <style>
+            img {
+                width: 300px;
+                height: 300px;
+                margin: 20px;
+                box-shadow: 8px 10px 50px rgba(0, 0, 0, 7);
+            }
+
+            div {
+                display: flex;
+                padding: 10px;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=small" alt="">
+            <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=xx-large" alt="">
+            <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=large" alt="">
+            <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=medium" alt="">
+            <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=small-medium" alt="">
+            <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=small-large" alt="">
+            <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=big" alt="">
+            <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=small-big" alt="">
+            <img src="https://thecatapi.com/api/images/get?format=src&type=gif&size=big-large" alt="">
+        </div>
+
+        <script>
+            window.onscroll = function (ev) {
+                if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                    $.get("https://raw.githubusercontent.com/Yohith-Programmer101/Web-Projects/main/Projects/Ajax/loadajax.html", function (data) {
+                        $("div").append(data);
+                    });
+                }
+            };
+            function loadContent() {
+                $.get("{% static 'Ajax/loadajax.html' %}", function (data) {
+                    $("div").append(data);
+                });
+            }
+        </script>
+    </body>
+
+</html>

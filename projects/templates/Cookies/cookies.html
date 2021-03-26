@@ -1,0 +1,79 @@
+<!DOCKTYPE>
+  <html lang="en">
+
+    {% load static %}
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Cookies</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <meta name="keywords"
+        content="coder101, coderone, hacker101, hackerone, example, html, css, javascript , animation, transmition, background, styling , style , script">
+      <meta name="author" content="Yohith">
+      <meta name="owner" content="Yohith">
+      <link rel='shortcut icon' type='image/ico'
+        href='data:image/png;base64,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'>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <link rel="stylesheet" href="{% static 'navstyle.css' %}">
+      <meta name="description" content="This is a page is a part of the website coder101, an example cookies.">
+      <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .btn {
+          margin: 10px;
+        }
+      </style>
+    </head>
+
+    <body>
+      <br>
+      <p>If addtionall cookies are available, it is the cookies of your browser we can't change it.</p>
+      <p>Our cookies will be at the last.</p>
+      <p>Cookies: username=coder101; password=coder101password</p>
+      <button class="btn btn-primary" onclick="getAllCookies('username', 'password')">Display Cookies</button>
+      <button class="btn btn-success" onclick="document.cookie = 'username=coder101; path=/;'">Create Cookie 1</button>
+      <button class="btn btn-success" onclick="document.cookie = 'password=coder101password; path=/;'">Create Cookie
+        2</button>
+      <button class="btn btn-danger"
+        onclick="document.cookie = 'username=coder101; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'">Delete Cookie
+        1</button>
+      <button class="btn btn-danger"
+        onclick="document.cookie = 'password=coder101password; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'">Delete
+        Cookie 2</button>
+      <script>
+        console.log(document.cookie);
+
+        function getAllCookies(cn1, cn2) {
+          alert(document.cookie);
+        }
+
+        function getCookie(cname) {
+          var name = cname + "=";
+          var decodedCookie = decodeURIComponent(document.cookie);
+          var ca = decodedCookie.split(';');
+          for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+              c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+              return c.substring(name.length, c.length);
+            }
+          }
+          return "";
+        }
+
+        function setCookie(cname, cvalue, exdays) {
+          var d = new Date();
+          d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+          var expires = "expires=" + d.toGMTString();
+          document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+      </script>
+    </body>
+
+  </html>

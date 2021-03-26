@@ -1,0 +1,199 @@
+<html lang="en">
+
+    {% load static %}
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Markdown-Parser</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <meta name="keywords"
+            content="coder101, coderone, hacker101, hackerone, example, html, css, javascript , animation, transmition, background, styling , style , script">
+        <meta name="author" content="Yohith">
+        <meta name="owner" content="Yohith">
+        <meta name="description"
+            content="This is a page is a part of the website coder101, A Markdown Parser or a Compiler made with Javascript.">
+        <link rel="shortcut icon"
+            href="data:image/png;base64,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"
+            type="image/x-icon">
+        <link rel="stylesheet" href="{% static 'navstyle.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            #textarea {
+                border: 1px solid black;
+                border-radius: 5px;
+            }
+
+            th {
+                margin: 10px;
+                padding: 5px;
+            }
+
+            button {
+                outline: none;
+                border: none;
+            }
+
+            ::-webkit-scrollbar,
+            ::-webkit-scrollbar:hover {
+                background-color: transparent;
+            }
+
+            ::-webkit-scrollbar {
+                width: 12px;
+                height: 8px;
+                border-radius: 100px;
+                border: 2px solid transparent;
+                background-clip: padding-box;
+            }
+
+            ::-webkit-scrollbar-corner {
+                background-color: transparent;
+            }
+
+            ::-webkit-scrollbar-thumb {
+                background: #e6e6e6;
+                border-radius: 100px;
+                cursor: pointer;
+                border: 2px solid transparent;
+                background-clip: padding-box;
+            }
+
+            ::-webkit-scrollbar-track {
+                border: 3px solid transparent;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h2 style="margin: 10px; padding: 5px;">Type the Markdown text here...</h2>
+        <div id="textarea" style="max-height: 200px; margin: 10px; padding: 5px; white-space: pre; overflow: auto;"
+            accesskey="t" contenteditable="true" oninput="output()"></div>
+        <br>
+        <div class="list-group" style="margin: 10px; padding: 10px;">
+            <span class="list-group-item" style="background-color: grey; color: white;">Output:</span>
+            <span id="output" class="list-group-item" style="padding: 10px; overflow: auto;"></span>
+        </div>
+
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="background-color: grey; color: white;">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Sample Commands</h4>
+                    </div>
+                    <div class="modal-body" style="color: black;">
+                        <p>
+                            # Heading level 1 <br>
+                            # Heading level 2 <br>
+                            # Heading level 3 <br>
+                            # Heading level 4 <br>
+                            # Heading level 5 <br>
+                            # Heading level 6 <br>
+                            *Italic* <br>
+                            **Bold** <br>
+                            *__Both Bold and Italic__* <br>
+                            `Codes` <br>
+                            > Block quotes <br>
+                            ~~Strike thorough~~ <br>
+                            --- Horizontal Line <br>
+                            << New line << In the same Line <br>
+                                Auto link generation of links: <br>
+                                http://coder101.epizy.com <br>
+                                ftp://127.0.0.1 <br>
+                                mailto://yohithprogrammer101@gmail.com <br>
+                                IP Addresses: <br>
+                                127.0.0.1 <br>
+                                Images: <br>
+                                ![Alternate Text](Image URL) <br>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal"
+                            style="outline: none;">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <small style="font-size: medium; color: grey; margin: 10px; padding: 10px;">To view the sample commands
+                click here.</small>
+            <button type="button" id="triger" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#myModal"
+                style="outline: none; background-color: grey; color: white;">Open Modal</button>
+            <span style="font-size: medium; color: grey; margin: 10px; padding: 10px;">(or) press <b
+                    style="padding: 5px;">Alt + c</b></span>
+        </div>
+        <script>
+            function parseMd(md) {
+
+                //blockquote
+                md = md.replace(/^\>(.+)/gm, '<blockquote>$1</blockquote>');
+
+                //h
+                md = md.replace(/[\#]{6}(.+)/g, '<h6>$1</h6>');
+                md = md.replace(/[\#]{5}(.+)/g, '<h5>$1</h5>');
+                md = md.replace(/[\#]{4}(.+)/g, '<h4>$1</h4>');
+                md = md.replace(/[\#]{3}(.+)/g, '<h3>$1</h3>');
+                md = md.replace(/[\#]{2}(.+)/g, '<h2>$1</h2>');
+                md = md.replace(/[\#]{1}(.+)/g, '<h1>$1</h1>');
+
+                // hr
+                md = md.replace(/[\-]{3}/g, '<hr>')
+
+                // br
+                md = md.replace(/[\<]{2}/g, '<br>')
+
+                //alt h
+                md = md.replace(/^(.+)\n\=+/gm, '<h1>$1</h1>');
+                md = md.replace(/^(.+)\n\-+/gm, '<h2>$1</h2>');
+
+                //images
+                md = md.replace(/\!\[([^\]]+)\]\(([^\)]+)\)/g, '<img src="$2" alt="$1" />');
+
+                //links
+                md = md.replace(/(\b(https?|ftp|file|mailto):\/\/[\-A-Z0-9+&@#\/%?=~_|!:,.;]*[\-A-Z09+&@#\/%=~_|])/img, '<a href="$1">$1</a>');
+                md = md.replace(/^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)/mg, '<a href="//$1.$2.$3.$4">$1.$2.$3.$4</a>')
+
+                //font styles
+                md = md.replace(/[\*\_]{2}([^\*\_]+)[\*\_]{2}/g, '<b>$1</b>');
+                md = md.replace(/[\*\_]{1}([^\*\_]+)[\*\_]{1}/g, '<i>$1</i>');
+                md = md.replace(/[\~]{2}([^\~]+)[\~]{2}/g, '<del>$1</del>');
+
+                //pre
+                md = md.replace(/^\s*\n\`\`\`(([^\s]+))?/gm, '<pre class="$2">');
+                md = md.replace(/^\`\`\`\s*\n/gm, '</pre>\n\n');
+
+                //code
+                md = md.replace(/[\`]{1}([^\`]+)[\`]{1}/g, '<code>$1</code>');
+
+                //p
+                md = md.replace(/^\s*(\n)?(.+)/gm, function (m) {
+                    return /\<(\/)?(h\d|ul|ol|li|blockquote|pre|img|)/.test(m) ? m : '<p>' + m + '</p>';
+                });
+
+                //strip p from pre
+                md = md.replace(/(\<pre.+\>)\s*\n\<p\>(.+)\<\/p\>/gm, '$1$2');
+
+                return md;
+
+            }
+            function output() {
+                var elem = $("#textarea");
+                var markdown = elem.html();
+                $("#output").html(parseMd(markdown))
+            }
+            output()
+            $('body').on('keydown', function (event) {
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if (keycode == '67' && event.altKey) {
+                    $('#triger').click();
+                }
+            });
+        </script>
+    </body>
+
+</html>
