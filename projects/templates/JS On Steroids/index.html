@@ -118,7 +118,7 @@
                     </div>
                 </div>
             </div>
-            <p id="short-screen-text">This page is best viewed in landscape format.</p>
+            <span id="short-screen-text">This page is best viewed in landscape format.</span>
         </div>
 
         <style>
@@ -131,7 +131,10 @@
 
             #short-screen-text {
                 display: none;
-                margin: auto;
+                position: relative;
+                top: 50%;
+                margin-left: auto;
+                margin-right: auto;
                 color: grey;
             }
 
@@ -143,6 +146,7 @@
             #body {
                 width: 100%;
                 height: 100%;
+                text-align: center;
             }
 
             @media only screen and (max-width: 600px) {
