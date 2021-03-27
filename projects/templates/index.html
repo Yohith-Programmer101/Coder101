@@ -198,29 +198,26 @@
         </style>
 
         <script>
-            var datas = {};
-
             loadProjects();
             function loadProjects() {
                 $.getJSON("{% static 'projects.json' %}", function (data) {
                     $("#count").html(data.length);
                     datas = data
+                    var max = data.length;
                     for (let i = 0; i < 12; i++) {
                         loadLoop(data, i);
                     }
                 })
             }
 
-            function loadContent(data) {
-                var max = data.length;
-                for (let i = 12; i <= max; i++) {
-                    if ($(".color-box:visible").length == max) {
-                        break;
-                    }
-                    else {
+            function loadContent() {
+                $.getJSON("{% static 'projects.json' %}", function (data) {
+                    $("#count").html(data.length);
+                    var max = data.length;
+                    for (let i = 12; i < max; i++) {
                         loadLoop(data, i);
                     }
-                }
+                })
             }
 
             function loadLoop(data, i) {
@@ -254,7 +251,7 @@
 
             $("document").ready(function () {
                 $("#body").show();
-                loadContent(datas);
+                loadContent();
                 $("#preloader").hide();
             })
         </script>
