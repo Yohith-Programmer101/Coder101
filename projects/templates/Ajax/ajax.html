@@ -57,7 +57,7 @@
         <script>
             window.onscroll = function (ev) {
                 if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-                    $.get("https://raw.githubusercontent.com/Yohith-Programmer101/Web-Projects/main/Projects/Ajax/loadajax.html", function (data) {
+                    $.get("{% static 'Ajax/loadajax.html' %}", function (data) {
                         $("div").append(data);
                     });
                 }
